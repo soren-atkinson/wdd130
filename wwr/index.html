@@ -3,47 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Main Page</title>
+    <meta name="description" content="Explore the thrilling experience of white water rafting!">
+    <title>White Water Rafting</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-
-        h1 {
-            font-size: 36px;
+            background-color: #f0f8ff;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
-
-        p {
-            font-size: 18px;
-            color: #666;
-            margin: 20px 0;
+        header {
+            background-color: #0073e6;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        a {
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .logo a {
             text-decoration: none;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border-radius: 5px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('hero-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+            color: black; /* Change the color to black */
+        }
+
+        /* Main Image Section */
+        .main-image-section {
+            background-image: url('rafting-options.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .main-image-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .main-image-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 20px;
+        }
+        .main-image-content h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .main-image-content p {
             font-size: 18px;
         }
 
-        a:hover {
-            background-color: #555;
+        main {
+            padding: 20px;
+        }
+
+        /* Cards Section */
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+        .card h3 {
+            margin: 15px 0;
+            color: #0073e6;
+        }
+        .card p {
+            color: #666;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #0073e6;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+        .card a:hover {
+            background-color: #005bb5;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Social Media Section */
+        .social-media {
+            margin-bottom: 20px;
+        }
+        .social-media a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        .social-media a:hover {
+            color: #ffcc00;
+        }
+
+        /* Copyright Section */
+        .copyright {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #ccc;
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to the Main Page</h1>
-    <p>This is the main page. Click the button below to navigate to the sister page.</p>
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="White Water Rafting Logo"> <!-- Logo updated to logo.png -->
+            White Water Rafting
+        </a>
+    </div>
+    <nav>
+        <a href="rivers.html">Rivers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <a href="site-plan-rafting.html">Go to Site Planner</a>
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Conquer the Rapids Today!</h1>
+</div>
+
+<!-- Main Image Section -->
+<div class="main-image-section">
+    <div class="main-image-content">
+        <h2>Explore Our Rafting Options</h2>
+        <p>From mild to wild, we offer rafting adventures for all skill levels. Choose from beginner-friendly trips to adrenaline-pumping whitewater rapids!</p>
+    </div>
+</div>
+
+<main>
+    <h2>Experience the thrill of the rapids!</h2>
+    <p>Join us for an unforgettable adventure as you navigate through some of the most exciting white water rapids.</p>
+    <p>Whether you're a seasoned pro or a beginner, we have the perfect package for you.</p>
+
+    <!-- Cards Section -->
+    <div class="cards">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="river.png" alt="River">
+            <h3>Exciting River Tours</h3>
+            <p>Discover our best rivers that offer the ultimate thrill for all levels of experience.</p>
+            <a href="rivers.html">Explore Rivers</a>
+        </div>
+
+        <!-- Updated Card 2 -->
+        <div class="card">
+            <img src="raft.png" alt="Guided River Expedition"> <!-- Updated image to raft.png -->
+            <h3>Guided River Expeditions</h3>
+            <p>Join our expert guides for an unforgettable river adventure tailored just for you.</p>
+            <a href="expeditions.html">Join an Expedition</a>
+        </div>
+
+        <!-- Updated Card 3 -->
+        <div class="card">
+            <img src="family.png" alt="Family Testimonials"> <!-- Updated image to family.png -->
+            <h3>What Our Clients Say</h3>
+            <p>Read about the incredible experiences our adventurers have had with us!</p>
+            <a href="testimonials.html">Read Testimonials</a>
+        </div>
+    </div>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="copyright">
+        &copy; 2024 White Water Rafting Adventures. All rights reserved.
+    </div>
+</footer>
+
+<!-- FontAwesome for social media icons (add this script tag to the <head>) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
