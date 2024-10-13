@@ -37,6 +37,12 @@ nav a:hover {
     color: #ffcc00; /* Yellow on hover */
 }
 
+/* Logo Image */
+.logo img {
+    height: 40px; /* Adjust the height to your desired size */
+    margin-right: 10px;
+}
+
 /* Hero Section */
 .hero {
     background-image: url('../pictures/hero-banner.jpg');
@@ -78,6 +84,11 @@ nav a:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+}
+
+.main-image-section img {
+    max-width: 80%; /* Limit the width of the main image */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .main-image-content {
@@ -126,6 +137,11 @@ main {
 
 .card p {
     color: #666;
+}
+
+.card img {
+    max-width: 100%; /* Limit the width of card images */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .card a {
