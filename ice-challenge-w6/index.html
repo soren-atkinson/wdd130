@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+          margin: 0;
+          height: 100%;
+        }
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr; /* Each column takes up 50% */
+          height: 100vh; /* Make the grid cover the full height of the viewport */
+        }
+
+        /* Style for the Tart & Sweet text */
+        .centered-text {
+          position: absolute;
+          top: 20%; /* Position it 1/4 from the top */
+          width: 100%; /* Cover both columns */
+          text-align: center;
+          font-size: 10vw; /* Use viewport width for responsive font sizing */
+          font-family: "Georgia", serif; /* Font similar to the image */
+          color: black;
+          font-weight: bold;
+          letter-spacing: 0.2em; /* Add letter spacing */
+          z-index: 1; /* Ensure the text is above other elements */
+        }
+
+        .grid-item {
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+          position: relative; /* Enable positioning inside the grid items */
+          z-index: 0; /* Ensure the grid is below the text */
+        }
+
+        /* Left cell background */
+        .grid-item-1 {
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        /* Right cell background */
+        .grid-item-2 {
+          background-color: grey;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end; /* Align to the bottom */
+        }
+
+        /* Style for Cherries text */
+        .grid-item-2 p {
+          font-family: "Georgia", serif; /* Font similar to the image */
+          color: maroon;
+          font-size: 2em;
+          letter-spacing: 0.4em; /* Add more letter spacing */
+          position: relative;
+          bottom: 5%; /* Move the text up by 1/4 of the height */
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Text that covers both cells and is positioned 1/4 from the top -->
+    <div class="centered-text">Tart & Sweet</div>
+
+    <div class="grid-container">
+        <!-- Left cell with white background and centered image -->
+        <div class="grid-item grid-item-1">
+            <img src="cherry.png" alt="Cherry">
+        </div>
+        <!-- Right cell with grey background and text -->
+        <div class="grid-item grid-item-2">
+            <p>Cherries</p>
+        </div>
+    </div>
+
+</body>
+</html>
