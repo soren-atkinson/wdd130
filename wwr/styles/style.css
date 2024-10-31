@@ -1,16 +1,17 @@
- /* General Styles */
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #ffffff; /* Changed background to white for better readability */
+    color: #333; /* Dark text for better readability on white background */
     line-height: 1.6;
 }
 
 h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     margin: 0;
+    color: #ebf1f4; /* Darker color for headings */
 }
 
 /* Container */
@@ -20,18 +21,18 @@ h1, h2, h3 {
     padding: 0 20px;
 }
 
-/* Header Styles */
+/* Header Styles with Grid */
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
-    background-color: #004d80;
+    background-color: #006699; /* Darker blue for higher contrast */
     padding: 20px;
     color: white;
     border-radius: 5px;
     margin-top: 20px;
 }
-
+ s z s
 header .logo a {
     display: flex;
     align-items: center;
@@ -51,10 +52,18 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ffd700;
+    color: #ffcc00; /* Yellow for a contrasting hover effect */
+}
+
+/* Main Grid Layout */
+.main-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 /* Hero Section */
@@ -62,16 +71,22 @@ nav a:hover {
     background-image: url('../pictures/hero-background.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 100px 20px;
-    margin-top: 20px;
     border-radius: 10px;
+    background-color: #005580; /* Fallback color */
 }
 
 .hero h1 {
     font-size: 3rem;
     margin: 0;
+    transition: transform 0.3s;
+}
+
+.hero h1:hover {
+    transform: scale(1.1);
+    color: #ffcc00; /* Yellow hover effect for contrast */
 }
 
 /* Main Image Section */
@@ -82,97 +97,66 @@ nav a:hover {
     color: white;
     text-align: center;
     padding: 80px 20px;
-    margin-top: 20px;
     border-radius: 10px;
-}
-
-.main-image-content {
-    background-color: rgba(0, 0, 0, 0.6);
-    display: inline-block;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.main-image-content h2 {
-    font-size: 2rem;
-}
-
-.main-image-content p {
-    font-size: 1rem;
-    margin: 10px 0 0;
-}
-
-/* Main Content Styles */
-main {
-    margin: 40px 0;
-}
-
-main h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-main p {
-    line-height: 1.8;
-    margin-bottom: 20px;
+    background-color: #005580; /* Fallback color */
 }
 
 /* Cards Section */
 .cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 40px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px; /* Space between cards */
+    justify-items: stretch;
 }
 
+
 .card {
-    background-color: white;
+    background-color: #f9f9f9; /* Light background for cards */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow for better contrast */
     width: 300px;
     margin: 20px;
     overflow: hidden;
     text-align: center;
     border: 1px solid #ccc;
+    transition: transform 0.3s;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ccc;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-.card p {
-    padding: 0 20px;
-    font-size: 1rem;
-    line-height: 1.6;
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #e6f2ff; /* Light blue hover effect */
 }
 
 .card a {
     display: block;
-    padding: 10px;
-    background-color: #004d80;
+    padding: 20px;
+    background-color: #006699; /* Dark blue for buttons */
     color: white;
     text-decoration: none;
     border-radius: 0 0 10px 10px;
 }
 
 .card a:hover {
-    background-color: #ffd700;
+    background-color: #ffcc00; /* Yellow hover effect for contrast */
 }
+
+.card img {
+    width: 100%; /* Adjusts the width to 80% of the card’s width */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 300px; /* Optional: limit the maximum width */
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
+    display: block;
+}
+
+
 
 /* Footer Styles */
 footer {
-    background-color: #004d80;
+    background-color: #006699;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
     border-radius: 10px;
 }
 
@@ -183,10 +167,39 @@ footer .social-media a {
 }
 
 footer .social-media a:hover {
-    color: #ffd700;
+    color: #ffcc00;
 }
 
 footer .copyright {
     margin-top: 10px;
     font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    nav a {
+        margin: 10px 0;
+    }
+    
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero, .main-image-section {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
 }
