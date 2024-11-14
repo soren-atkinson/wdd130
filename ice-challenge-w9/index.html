@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Three</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .date {
+            color: #6c757d;
+            font-size: 1.2em; /* Reduced font size */
+            margin-bottom: 5px;
+        }
+        .title {
+            font-size: 1.8em; /* Reduced font size */
+            font-weight: bold;
+            margin: 5px 0;
+            color: #333;
+        }
+        .description {
+            font-size: 1.6em; /* Reduced font size */
+            color: #888;
+            margin: 20px 0;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+            background-color: #3b4a66;
+            color: #fff;
+            font-weight: bold;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .stats div {
+            font-size: 1.3em; /* Reduced font size */
+            text-align: center;
+        }
+        .stats div span {
+            display: block;
+            font-size: 0.5em; /* Reduced font size */
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="w09_ice_img.jpg" alt="Brooklyn Bridge with NYC skyline">
+    <div class="content">
+        <div class="date">3 weeks ago</div>
+        <div class="title">Post Three</div>
+        <div class="description">
+            This would be some text to go here and tell you about this awesome article that they should definitely read. This would be some text to go here and tell you about this awesome article that they should definitely read. This would be some text to go here.
+        </div>
+    </div>
+    <div class="stats">
+        <div>5m<span>READ</span></div>
+        <div>2031<span>VIEWS</span></div>
+        <div>15<span>COMMENTS</span></div>
+    </div>
+</div>
+
+</body>
+</html>
